@@ -1,0 +1,25 @@
+import random
+
+LINHA=2
+COLUNA=3
+a=[[None]*COLUNA for i in range(LINHA)]
+b=[[None]*COLUNA for i in range(LINHA)]
+c=[[None]*COLUNA for i in range(LINHA)]
+print(' MATRIZ A: ')
+for linha in range(LINHA):
+  for coluna in range(COLUNA):
+    a[linha][coluna]=random.randint(1,9)
+    print(f'{a[linha][coluna]:4}',end=' ')
+  print()  
+print('MATRIZ B: ')
+for linha in range(LINHA):
+  for coluna in range(COLUNA):
+    b[linha][coluna]=random.randint(1,9)
+    print(f'{b[linha][coluna]:4}',end=' ')
+  print() 
+print('SOMA DAS MATRIZEZ:')
+for linha in range(LINHA):
+  for coluna in range(COLUNA):
+    c[linha][coluna]= a[linha][coluna]+b[linha][coluna]
+    print(f'{c[linha][coluna]:4}',end=' ')
+  print()
