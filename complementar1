@@ -1,0 +1,38 @@
+ORDEM=int(input('digite a ordem da matriz: '))
+matriz=[[None]*ORDEM for i in range(ORDEM)]
+
+for linha in range(ORDEM):
+  for coluna in range(ORDEM):
+    matriz[linha][coluna]=int(input('valores da matriz: '))
+print('matriz a : ')    
+for linha in range(ORDEM):
+  for coluna in range(ORDEM):
+    print(f'{matriz[linha][coluna]:4}',end=' ')
+  print()
+
+permutaçao=True
+#linha
+for linha in range(ORDEM):
+  cont=0
+  for coluna in range(ORDEM):
+    if matriz[linha][coluna]==1:
+      cont+=1
+    if cont>1:
+      permutaçao=False
+      break
+  if not permutaçao:
+    break
+#coluna 
+if permutaçao:
+   for coluna in range(ORDEM):
+     cont=0
+     for linha in range(ORDEM):
+       if matriz[linha][coluna]==1:
+         cont+=1
+       if cont>1:
+         permutaçao=False
+         break
+     if not permutaçao:
+       break
+
+print( 'Eh permutaçao' if permutaçao else 'nao eh ')
