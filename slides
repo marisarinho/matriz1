@@ -1,0 +1,112 @@
+# IMPRIMINDO MATRIZ COM RANDOM
+
+# import random
+# LINHA=10
+# COLUNA=10
+# matriz=[[None]*COLUNA for i in range (LINHA)]
+# for linha in range(LINHA):
+# for coluna in range(COLUNA):
+# matriz[linha][coluna] = random.randint(1, 9)
+# print(matriz)
+
+#IMPRIMINDO A MATRIZ EM LINHAS E COLUNAS
+
+# LINHA=2
+# COLUNA=3
+# matriz=[[1,2,3],[3,5,6]]
+# for linha in range(LINHA):
+# for coluna in range(COLUNA):
+# print(f'{matriz[linha][coluna]:4}',end=' ')
+# print()
+
+# esse ultimo print é bem importante pois eh ele quem vai fazer com que os numeros
+# fiquem alinhados em colunas e linhas
+
+# EXEMPLOS DOS SLIDES SOLUCIONADOS
+
+# Ler uma matriz A, de ordem 2x3 contendo inteiros, gerar uma matriz B onde cada
+# elemento de B corresponderá ao dobro do respectivo elemento de A.
+
+# LINHA=2
+# COLUNA=3
+# a=[[None]*COLUNA for i in range(LINHA)]
+# b=[[None]*COLUNA for i in range(LINHA)]
+# for linha in range(LINHA):
+# for coluna in range(COLUNA):
+# a[linha][coluna]=int(input())
+# b[linha][coluna]=a[linha][coluna] * 2
+# print(a)
+# print(b)
+
+# Ler uma matriz A de ordem M x N (obs: M e N serão lidos) contendo inteiros, calcular e
+# exibir a soma de todos os seus elementos.
+# Mlinha=int(input('quant de linhas da matriz:'))
+# Ncoluna=int(input('quant de linhas da coluna:'))
+# a=[[None]*Ncoluna for i in range(Mlinha)]
+# print('digite os numeros da matriz')
+# soma=0
+# for linha in range(Mlinha):
+# for coluna in range(Ncoluna):
+# a[linha][coluna]=int(input(f'{linha}x{coluna}='))
+# soma+=a[linha][coluna]
+# print(soma)
+
+# Gerar e imprimir uma matriz quadrada de ordem N (N será lido), onde cada elemento
+# corresponderá a soma de seus índices. Obs: a matriz deve ser impressa no formato de
+# matriz.
+
+# LINHA=int(input('qual o tamanho da matriz? '))
+# COLUNA=LINHA
+# m=[[None]*COLUNA for i in range(LINHA)]
+# for linha in range(LINHA):
+# for coluna in range(COLUNA):
+# m[linha][coluna]=linha+coluna
+# print(f'{m[linha][coluna]:4}',end=' ')
+# print()
+
+# Dada uma matriz de inteiros, determinar o maior valor da matriz. Obs: a ordem da
+# matriz
+# será lida e os elementos serão gerados com valores aleatórios entre 1 e 20.
+
+# import random
+# LINHA=int(input('qual a ordem da matriz?'))
+# COLUNA=LINHA
+# m=[[None]*COLUNA for i in range(LINHA)]
+# maior=[0][0]
+# for linha in range (LINHA):
+# for coluna in range(COLUNA):
+# m[linha][coluna]=random.randint(1,20)
+# if m[linha][coluna]> maior:
+# maior=m[linha][coluna]
+# for linha in range (LINHA):
+# for coluna in range(COLUNA):
+# print(f'{m[linha][coluna]:4}',end=' ')
+# print()
+# print(maior)
+
+# Gerar uma matriz (3 x 5) com valores inteiros aleatórios (entre 1 e 10), calcular a
+# soma de
+# cada linha e a soma de cada coluna.
+
+# import random
+# LINHA=3
+# COLUNA=5
+# matriz=[[None]*COLUNA for i in range(LINHA)]
+
+# for linha in range(LINHA):
+# for coluna in range(COLUNA):
+# matriz[linha][coluna]=random.randint(1,10)
+# print(f'{matriz[linha][coluna]:4}', end=' ')
+# print()
+# print('soma das linhas')
+# for linha in range(LINHA):
+# som=0
+# for coluna in range(COLUNA):
+# som+=matriz[linha][coluna]
+# print(f'{som:4}')
+# print('soma das colunas')
+# for coluna in range(COLUNA):
+# som=0
+# for linha in range(LINHA):
+# som+=matriz[linha][coluna]
+# print(f'{som:4}',end=' ')
