@@ -1,0 +1,19 @@
+import random
+
+LINHA = 3
+COLUNA = 5
+a = [[None] * COLUNA for i in range(LINHA)]
+x = [[None] * LINHA for i in range(COLUNA)]
+print('MATRIZ ORIGINAL: ')
+for linha in range(LINHA):
+  for coluna in range(COLUNA):
+    a[linha][coluna] = random.randint(1, 9)
+    print(f'{a[linha][coluna]:4}', end=' ')
+  print()
+print('MATRIZ TRANSPOSTA: ')
+for linha in range(COLUNA):
+  for coluna in range(LINHA):
+    x[linha][coluna] = a[coluna][linha]
+    print(f'{x[linha][coluna]:4}', end=' ')
+  print()
+# MUITOOOOOO IMPORTANTE!!!!!!!!1
