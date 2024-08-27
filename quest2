@@ -1,0 +1,16 @@
+import random
+
+LINHA=int(input('qual a ordem da matriz? '))
+COLUNA=LINHA
+m=[[None]*COLUNA for i in range(LINHA)]
+print('MATRIZ : ')
+for linha in range(LINHA):
+  for coluna in range(COLUNA):
+    m[linha][coluna]=random.randint(1,9)
+    print(f'{m[linha][coluna]:4}',end=' ')
+  print()
+
+for linha in range(LINHA):
+  for coluna in range(COLUNA):
+    if m[linha]== m[coluna]:
+      print(m[linha][coluna])
