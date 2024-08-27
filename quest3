@@ -1,0 +1,21 @@
+import random
+
+ORDEM = int(input('qual a ordem da matriz? '))
+a = [[None] * ORDEM for i in range(ORDEM)]
+b = [[None] * ORDEM for i in range(ORDEM)]
+print('MATRIZ A : ')
+for linha in range(ORDEM):
+  for coluna in range(ORDEM):
+    a[linha][coluna] = random.randint(1, 9)
+    print(f'{a[linha][coluna]:4}', end=' ')
+  print()
+
+print('MATRIZ B: ')
+for linha in range(ORDEM):
+  for coluna in range(ORDEM):
+    if (linha==coluna)or (linha+coluna)==(ORDEM-1):
+      b[linha][coluna]=0
+    else:
+      b[linha][coluna]=a[linha][coluna]+(linha+coluna)
+    print(f'{b[linha][coluna]:4}', end=' ')
+  print()
